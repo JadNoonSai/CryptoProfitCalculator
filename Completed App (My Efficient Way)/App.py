@@ -57,7 +57,7 @@ def get_headers() :
     return columns
 
 def get_supported_currencies() :
-    url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?CMC_PRO_API_KEY=f63ff251-a883-4b92-8a3d-2685615e31bf"
+    url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?CMC_PRO_API_KEY=[My_Key]'
     api_request = requests.get(url)
     api_got:dict = json.loads(api_request.content)
     supported_currencies = api_got["data"]
@@ -134,7 +134,7 @@ def get_api_error_port(rt:requests.exceptions.ReadTimeout):
 
 def request_api(symbol) :
     
-    key = "f63ff251-a883-4b92-8a3d-2685615e31bf"
+    key="[My key]"
     url = f'https://pro-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest'
     params = {'symbol': symbol , 'CMC_PRO_API_KEY' : key}
 
